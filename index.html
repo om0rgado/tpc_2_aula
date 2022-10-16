@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O meu 1º website</title>
+
+<style>
+  h1 {color: rgb(255, 251, 218);position: absolute; left: 20px; top:100px;}
+  button {background-color: rgb(255, 251, 218);color: rgb(0, 0, 0) ;position: absolute; left: 180px; top:131px}
+  h3 {color: rgb(218, 123, 15);position: absolute; left: 0px; top:803px;}
+
+    body 
+    { background-image: url(background.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-size: 100% 96%;
+    background-position-y: bottom; }
+
+    body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif ;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(38, 24, 61);
+}
+
+.topnav a {
+  float: left;
+  color: #adeeeb;
+  text-align: center ;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.active {
+  background-color: #2b2185;
+  color: rgb(255, 230, 194); }
+  
+  .topnav a:hover {
+  background-color: rgb(255, 247, 247);
+  color: rgb(14, 7, 7);
+}
+  
+</style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="https://www.youtube.com/watch?v=mSat_NlAC7U&ab_channel=RichieCampbellVEVO">Background Music</a>
+        <a href="nothome.html">Not Home</a>
+      </div>
+
+<div>
+      <h1> Sobre mim </h1>
+</div>
+
+<button onclick="typeWriter()">...</button>
+
+<h3 id="mini bio"></h3>
+
+<script>
+var i = 0;
+var txt = 'Olá ,sou o Rodrigo tenho 18 anos e estudo Comunicação audiovisual e multimédia na ULP ' ;
+var speed = 35;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("mini bio").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+      
+      
+      
+</body>
+</html>
